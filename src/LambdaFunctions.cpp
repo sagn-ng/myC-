@@ -14,11 +14,11 @@ int main(){
         return (a+b)/2.0;
     };
     cout<<avg(2.5, 0.25)<<'\n';
-
-    //the capture clause: capture[] - give the lambda function access to a variable outside of it
+    int j=5;
+    //the capture clause: capture[] - give the lambda function access to a variable (or variables) outside of it
     for (int i=1; i<=3; i++){
-        auto show=[i](){
-            cout<<"number: "<<i<<"\n";
+        auto show=[i,j](){
+            cout<<"number: "<<i+j<<"\n";
         };
         show();
     }
