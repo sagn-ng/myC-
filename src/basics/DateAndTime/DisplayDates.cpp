@@ -8,10 +8,10 @@ int main(){
     myTime.tm_hour=20; myTime.tm_min=30; myTime.tm_sec=0;
     myTime.tm_isdst=-1;
 
-    //mktime() method to validate the date first, fix errors like: tm_mday=32
+    //mktime() function to validate the date first, fix errors like: tm_mday=32
     mktime(&myTime);
 
-    //asctime() method to display dates from a tm struct
+    //asctime() function to display dates from a tm struct
     //faster than assign: time_t = mktime(&myTime) then ctime()
     cout<<asctime(&myTime)<<endl;
 

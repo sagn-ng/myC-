@@ -4,14 +4,14 @@ using namespace std;
 
 int main(){
     time_t t=time(NULL);
-    //the time() method writes a timestamp to the memory location given by the parameter,
+    //the time() function writes a timestamp to the memory location given by the parameter,
     //but it also returns the timestamp's value, so we can also replace NULL with &t, or:
     // time_t t; time(&t);
     cout<<ctime(&t)<<endl;
 
     //we have localtime and gmtime;
     //localtime: computer's timezone; gmtime: GMT timezone
-    //these 2 methods return pointers, we get the value by dereferencing
+    //these 2 functions return pointers, we get the value by dereferencing
     struct tm currTime=*gmtime(&t); //convert a timestamp into a tm struct
     time_t check=mktime(&currTime); cout<<ctime(&check)<<endl;
 
