@@ -26,7 +26,7 @@ int main(){
     for (int i=0; i<100000; i++) k+=i;
     clock_t duration = clock() - before;
     /*each call to the clock function returns a timestamp mesured in a
-    unit called "clock", to convert to seconds, we use:*/
+    unit called "clock_t", to convert to seconds, we use:*/
     cout<<"Duration: "<<(double) duration / CLOCKS_PER_SEC << " seconds";
     return 0;
 }
